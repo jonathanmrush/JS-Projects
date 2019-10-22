@@ -1,0 +1,119 @@
+* {
+  padding: 1;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 8vh;
+  background: rgb(39, 68, 52);
+  font-family: "Cinzel", serif;
+}
+
+.logo {
+  color: rgb(243, 179, 245);
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-size: 20px;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: space-around;
+  width: 30%;
+}
+.nav-links li {
+  list-style: none;
+}
+.nav-links a {
+  color: rgb(243, 179, 245);
+  text-decoration: none;
+  letter-spacing: 3px;
+  font-weight: bold;
+  font-size: 14px;
+}
+.burger {
+  display: none;
+  cursor: pointer;
+}
+.burger div {
+  display: flex;
+  width: 25px;
+  height: 5px;
+  background-color: rgb(243, 179, 245);
+  margin: 3px;
+  transition: all 0.3s ease;
+}
+#house,
+#adven,
+#goal {
+  cursor: pointer;
+  padding: 0px;
+  position: absolute;
+  left: -22px;
+}
+#char {
+  left: -18px;
+  position: absolute;
+  cursor: pointer;
+}
+@media screen and (max-width: 3840px) {
+  body {
+    overflow-x: hidden;
+  }
+  .nav-links {
+    position: absolute;
+    right: 0px;
+    height: 92vh;
+    top: 8vh;
+    background-color: rgb(39, 68, 52);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 15%;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in;
+  }
+  .nav-links li {
+    opacity: 0;
+  }
+  .burger {
+    display: block;
+  }
+}
+
+.nav-active {
+  transform: translateX(0%);
+}
+
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+.toggle .line1 {
+  transform: rotate(0deg) translate(-5px, 6px);
+}
+.toggle .line2 {
+  opacity: 0;
+}
+.toggle .line3 {
+  transform: rotate(-90deg) translate(-5px, -6px);
+}
+
+.body {
+  background: wheat;
+  font-family: sans-serif;
+  text-align: center;
+  left: 10%;
+  right: 10%;
+}
