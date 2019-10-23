@@ -60,6 +60,7 @@ nav {
   position: absolute;
   cursor: pointer;
 }
+
 @media screen and (max-width: 3840px) {
   body {
     overflow-x: hidden;
@@ -74,6 +75,31 @@ nav {
     flex-direction: column;
     align-items: center;
     width: 15%;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in;
+  }
+  .nav-links li {
+    opacity: 0;
+  }
+  .burger {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
+  .nav-links {
+    position: absolute;
+    right: 0px;
+    height: 92vh;
+    top: 8vh;
+    background-color: rgb(39, 68, 52);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 32%;
     transform: translateX(100%);
     transition: transform 0.5s ease-in;
   }
@@ -110,10 +136,20 @@ nav {
   transform: rotate(-90deg) translate(-5px, -6px);
 }
 
-.body {
+.box1 {
   background: wheat;
   font-family: sans-serif;
   text-align: center;
   left: 10%;
   right: 10%;
+  height: 100vh;
+}
+
+.box2 {
+  background: wheat;
+  font-family: sans-serif;
+  text-align: center;
+  left: 10%;
+  right: 10%;
+  height: 100vh;
 }
