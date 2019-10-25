@@ -1,17 +1,23 @@
-* {
-  padding: 0;
-  margin: 0;
+#calendar-container {
+  padding: 0px;
+  width: 210px;
+  height: 210px;
+  text-align: center;
+  border: 2px solid #eeeeee;
+  border-radius: 10px;
+  font-size: 13px;
+  font-family: "Cinzel", serif;
+  background-image: linear-gradient(rgb(161, 0, 0), #d3d3d3);
   box-sizing: border-box;
 }
-th {
-  text-align: left;
-}
 
-th,
-td {
-  padding: 15px;
+#calendar-container > div {
+  padding: 0;
+  margin-bottom: 10px;
 }
-table {
-  border-spacing: 5px;
-  border: 1px black;
+#calendar-month-year {
+  margin: 5px;
+}
+#calendar-dates > table > tr > td {
+  padding: 5px;
 }

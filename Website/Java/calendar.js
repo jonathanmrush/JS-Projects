@@ -33,16 +33,16 @@ function get_calendar(day_no, days) {
   var tr = document.createElement("tr");
 
   //row for the day letters
-  for (var c = 0; c < 6; c++) {
+  for (var c = 0; c < 7; c++) {
     var td = document.createElement("td");
-    td.innerHTML = "SMTWTOA"[c];
+    td.innerHTML = "SMTWTFS"[c];
     tr.appendChild(td);
   }
   table.appendChild(tr);
   //create 2nd row
   tr = document.createElement("tr");
   var c;
-  for (c = 0; c <= 6; c++) {
+  for (c = 0; c <= 7; c++) {
     if (c == day_no) {
       break;
     }
@@ -51,7 +51,7 @@ function get_calendar(day_no, days) {
     tr.appendChild(td);
   }
   var count = 1;
-  for (; c < 6; c++) {
+  for (; c < 7; c++) {
     var td = document.createElement("td");
     td.innerHTML = count;
     count++;
