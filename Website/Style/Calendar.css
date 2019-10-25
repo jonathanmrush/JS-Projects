@@ -1,5 +1,5 @@
 #calendar-container {
-  padding: px;
+  padding: 0px;
   width: 30%;
   height: 50vh;
   text-align: center;
@@ -8,12 +8,6 @@
   font-size: 35px;
   font-family: "Cinzel", serif;
   background-image: linear-gradient(rgb(161, 0, 0), #d3d3d3);
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin-top: 50px;
-  align-items: center;
   position: absolute;
   left: 35%;
 }
@@ -27,4 +21,7 @@
 }
 #calendar-dates > table > tr > td {
   padding: 5px;
+}
+
+@media screen and (max-width: 768px) {
 }
