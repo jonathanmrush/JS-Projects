@@ -22,6 +22,15 @@ nav {
   text-align: left;
 }
 
+.logo a {
+  text-decoration: none;
+  color: rgb(243, 179, 245);
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-size: 20px;
+  display: flex;
+  text-align: left;
+}
 .nav-links {
   display: flex;
   justify-content: space-around;
@@ -38,6 +47,7 @@ nav {
   font-size: 14px;
   padding: 9px;
 }
+
 .burger {
   display: none;
   cursor: pointer;
@@ -72,18 +82,75 @@ nav {
     display: flex;
     flex-direction: row;
     align-items: center;
+    flex: 1;
   }
 }
 
 .bottom {
-  height: 20vh;
+  height: 400px;
   background-color: rgb(39, 68, 52);
-  flex-direction: row;
+  text-align: center;
   font-family: "Cinzel", serif;
   color: rgb(243, 179, 245);
+  flex: 1;
+  position: relative;
+}
+
+.bottom .bottom-content h1,
+.bottom .bottom-content h2 {
+  color: white;
+  text-align: center;
+}
+
+.bottom .bottom-content .about h1 span {
+  color: rgb(51, 2, 53);
+}
+.bottom .bottom-content .about .contact span {
+  display: block;
+  font-size: 1.1em;
+  margin-bottom: 8px;
+  text-decoration: none;
+}
+.bottom .bottom-content .about a {
+  text-decoration: none;
+}
+.bottom .bottom-content .about .socials a {
+  border: 1px solid gray;
+  width: 35px;
+  height: 41px;
+  padding-top: 5px;
+  margin-right: 5px;
+  text-align: center;
+  display: inline-block;
+  font-size: 1.3em;
+  border-radius: 5px;
+  text-decoration: none;
+  color: rgb(243, 179, 245);
+}
+
+.bottom .bottom-bottom {
+  background: rgb(28, 49, 38);
+  height: 50px;
+  text-align: center;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  padding-top: 20px;
+  width: 100%;
+}
+
+.bottom .bottom-content {
+  border: 1px solid red;
+  height: 350px;
   display: flex;
 }
-@media screen and (max-width: 768px) {
+
+.bottom .bottom-content .bottom-section {
+  flex: 1;
+  border: 1px solid white;
+}
+
+@media screen and (max-width: 800px) {
   body {
     overflow-x: hidden;
   }
@@ -95,6 +162,7 @@ nav {
     background-color: rgb(39, 68, 52);
     display: flex;
     flex-direction: column;
+    font-size: 14px;
     align-items: center;
     width: 32%;
     transform: translateX(100%);
@@ -105,6 +173,40 @@ nav {
   }
   .burger {
     display: block;
+  }
+  .nav-links a {
+    font-size: 14px;
+    overflow: hidden;
+  }
+}
+
+@media screen and (max-width: 796px) {
+  body {
+    overflow-x: hidden;
+  }
+  .nav-links {
+    position: absolute;
+    right: 0px;
+    height: 92vh;
+    top: 8vh;
+    background-color: rgb(39, 68, 52);
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+    align-items: center;
+    width: 32%;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in;
+  }
+  .nav-links li {
+    opacity: 0;
+  }
+  .burger {
+    display: block;
+  }
+  .nav-links a {
+    font-size: 10px;
+    overflow: hidden;
   }
 }
 
@@ -133,20 +235,24 @@ nav {
   transform: rotate(-90deg) translate(-5px, -6px);
 }
 
+body {
+  background: whitesmoke;
+  height: 100%;
+}
 .box1 {
-  background: wheat;
+  background: whitesmoke;
   font-family: sans-serif;
   text-align: center;
   left: 10%;
   right: 10%;
-  height: 100vh;
+  height: 80vh;
 }
 
 .box2 {
-  background: wheat;
+  background: whitesmoke;
   font-family: sans-serif;
   text-align: center;
   left: 10%;
   right: 10%;
-  height: 100vh;
+  height: 80vh;
 }
