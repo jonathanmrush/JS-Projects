@@ -26,3 +26,18 @@ const navSlide = () => {
   });
 };
 navSlide();
+
+mybutton = document.getElementById("btn-big");
+window.onscroll = function() {
+  this.scrollFunction();
+};
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.styte.display = "block";
+  }
+}
+
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
