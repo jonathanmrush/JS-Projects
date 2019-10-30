@@ -1,0 +1,36 @@
+#topt {
+  background-color: rgb(38, 68, 52);
+  text-align: center;
+  font-family: "Cinzel", serif;
+  color: whitesmoke;
+  font-weight: 100;
+}
+.cBox1 {
+  background: whitesmoke;
+  font-family: sans-serif;
+  text-align: center;
+  left: 10%;
+  right: 10%;
+  height: 100%;
+  border: 20px solid;
+  border-image: url(../img/leafborder.jpg) 100 round;
+  border-image-outset: 10px;
+}
+
+.cVidar,
+.cPercy {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+}
+
+#Vidar {
+  height: 200px;
+  width: 20%;
+  margin: auto;
+}
+#Percy {
+  height: 200px;
+  width: 10%;
+  margin: auto;
+}
