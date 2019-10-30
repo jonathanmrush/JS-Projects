@@ -295,23 +295,91 @@ nav {
 }
 
 body {
-  background: whitesmoke;
+  background: wheat;
   height: 100%;
 }
-.box1 {
-  background: whitesmoke;
-  font-family: sans-serif;
-  text-align: center;
-  left: 10%;
-  right: 10%;
-  height: 100vh;
-}
-
+.box1,
 .box2 {
   background: whitesmoke;
   font-family: sans-serif;
   text-align: center;
   left: 10%;
   right: 10%;
-  height: 100vh;
+  height: 100%;
+  padding: 20px;
+  border: 20px solid;
+  border-image: url(./img/borderboder.jpg) 100 round;
+  border-image-outset: 10px;
+}
+
+.topRow,
+.middleRow {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+
+  font-family: "Cinzel", serif;
+  font-weight: 400;
+  position: relative;
+  text-align: center;
+}
+#about {
+  width: 50%;
+  padding: 5px;
+  border: thin 3px black;
+  padding: 50px;
+  border: 25px solid transparent;
+  border-image: url(./img/bordergold.png) 50 round;
+}
+
+#titleH {
+  background-color: rgb(39, 68, 52);
+  font-family: "Cinzel", serif;
+
+  color: whitesmoke;
+}
+
+#start {
+  font-family: "Cinzel", serif;
+  background-color: rgb(39, 68, 52);
+  color: whitesmoke;
+}
+
+#history1,
+#history2,
+#history3,
+#history4 {
+  width: 25%;
+  padding: 5px;
+  text-align: center;
+  margin: auto;
+  text-decoration-line: underline;
+}
+.tLocale {
+  background-color: rgb(39, 68, 52);
+  font-family: "Cinzel", serif;
+  color: whitesmoke;
+  text-decoration: none;
+}
+.section1,
+.section2 {
+  color: whitesmoke;
+}
+
+#cList {
+  list-style: none;
+  margin: auto;
+}
+
+.bottomRow {
+  display: flex;
+  flex: 2;
+  font-family: "Cinzel", serif;
+  font-weight: 300;
+}
+
+#bottom2,
+#bottom3 {
+  width: 25%;
+  margin: auto;
 }
