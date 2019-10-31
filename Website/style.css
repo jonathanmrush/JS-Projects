@@ -225,6 +225,7 @@ nav {
     align-items: center;
     width: 32%;
     transform: translateX(100%);
+    z-index: 1;
     transition: transform 0.5s ease-in;
   }
   .nav-links li {
@@ -255,6 +256,7 @@ nav {
     align-items: center;
     width: 32%;
     transform: translateX(100%);
+    z-index: 1;
     transition: transform 0.5s ease-in;
   }
   .nav-links li {
@@ -330,6 +332,7 @@ body {
   padding: 50px;
   border: 25px solid transparent;
   border-image: url(./img/bordergold.png) 50 round;
+  margin: auto;
 }
 
 #titleH {
