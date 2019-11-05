@@ -365,7 +365,9 @@ body {
   text-decoration: none;
 }
 .section1,
-.section2 {
+.section2,
+.section3,
+.section4 {
   color: whitesmoke;
 }
 
