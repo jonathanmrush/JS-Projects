@@ -8,8 +8,34 @@ var completeSVG =
 //User Clicks on the add button adds text to to-do list
 document.getElementById("add").addEventListener("click", function() {
   var value = document.getElementById("item").value;
-  if (value) addItemTodo(value);
+  if (value) {
+    addItemTodo(value);
+    document.getElementById("item").value = "";
+  }
 });
+
+function removeItem() {
+  var item = this.parentNode.parentNode;
+  var parent = item.parentNode;
+
+  parent.removeChild(item);
+}
+
+function completeItem() {
+  var item = this.parentNode.parentNode;
+
+  var parent = item.parentNode;
+  var id = parent.id;
+
+  //Checks f the item should be added to completed or added to todo
+  var target =
+    id === "todo"
+      ? document.getElementById("completed")
+      : document.getElementById("todo");
+
+  parent.removeChild(item);
+  target.insertBefore(item, target.childNodes[0]);
+}
 
 //Adds a new item to the todo list
 function addItemTodo(text) {
@@ -25,13 +51,20 @@ function addItemTodo(text) {
   remove.classList.add("remove");
   remove.innerHTML = removeSVG;
 
+  //Add click event for remove item
+  remove.addEventListener("click", removeItem);
+
   var complete = document.createElement("button");
   complete.classList.add("complete");
   complete.innerHTML = completeSVG;
+
+  //Add click event for completed items
+
+  complete.addEventListener("click", completeItem);
 
   buttons.appendChild(remove);
   buttons.appendChild(complete);
   item.appendChild(buttons);
 
-  list.appendChild(item);
+  list.insertBefore(item, list.childNodes[0]);
 }
